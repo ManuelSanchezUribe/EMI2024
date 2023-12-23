@@ -2,8 +2,8 @@
 Escuela de Verano en Métodos Iterativos
 
 ## Organizadores
-Nicolas Barnafi
-Manuel A. Sanchez
+- Nicolas Barnafi
+- Manuel A. Sanchez
 
 
 ## Programa
