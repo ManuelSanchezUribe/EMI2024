@@ -34,6 +34,6 @@ Con los siguientes comandos se instala NGSolve, Jupyter (para abrir notebooks) y
 
 pip install ngsolve
 pip install jupyter
-pip install jupyter_contrib_nbextensions
+pip3 install webgui_jupyter_widgets
 
 También se puede usar Google Collab siguiendo las instrucciones disponibles en [TODO]
