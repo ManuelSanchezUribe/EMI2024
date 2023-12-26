@@ -1,8 +1,8 @@
 # EMI2024
-Escuela de Verano en Métodos Iterativos
+Escuela de Verano en Métodos Iterativos 2024 @ Centro de Modelamiento Matemático (CMM), av. Beauchef 851 piso 7, sala von Neumann.
 
 ## Organizadores
-- Nicolas Barnafi
+- Nicolas A. Barnafi
 - Manuel A. Sanchez
 
 
