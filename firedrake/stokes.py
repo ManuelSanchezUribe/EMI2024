@@ -22,7 +22,7 @@ un, pn = split(soln)
 v, q = TestFunctions(V)
 
 F = Constant(1/Re) * \
-    inner(grad(u), grad(v)) * dx - div(v) * p * dx + div(u) * q * dx
+    inner(grad(u), grad(v)) * dx - div(v) * p * dx - div(u) * q * dx
 L = dot(Constant((0, 0)), v) * dx
 F_schur = Constant(Re) * p * q * dx
 FJ = F
@@ -34,7 +34,7 @@ else:
 # BCs
 zero = Constant((0, 0))
 v_in = Constant((1, 0))
-bc_noslip = DirichletBC(V.sub(0), zero, (1, 2, 3))  # x in {0,L} and y = 0
+bc_noslip = DirichletBC(V.sub(0), zero, (1, 3))  # x in {0,L} and y = 0
 bc_in = DirichletBC(V.sub(0), v_in, 4)
 bcs = [bc_noslip, bc_in]
 
@@ -43,6 +43,7 @@ params = {
     "ksp_type": KSP,
     #"mat_type": "nest", # Improves scalability
     #"ksp_norm_type": "unpreconditioned",
+    "ksp_monitor": None, 
     "ksp_converged_reason": None,
     "ksp_max_it": 1000,
     "ksp_atol": 1e-14,
