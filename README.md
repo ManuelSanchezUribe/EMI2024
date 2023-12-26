@@ -11,7 +11,7 @@ Día 1 – Jueves 4
 
 - 09:30 – 11:00: Bienvenida + Introducción
 - 11:00 – 11:30: Coffee break
-- 11:30 – 13:00: Métodos Iteratives
+- 11:30 – 13:00: Métodos Iterativos: Richardson, Jacobi, GaussSeidel, SOR, Matriz de iteracion - analisis de convergencia
 - 13:00 – 14:30: Libre
 - 14:30 – 16:00: Métodos de Krylov: CG y GMRES
 - 16:00 – 16:30: Coffee break
