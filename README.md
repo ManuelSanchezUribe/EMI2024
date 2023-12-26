@@ -26,3 +26,14 @@ Día 2 – Viernes 5
 - 14:30 – 16:00: Problemas avanzados
 - 16:00 – 16:30: Coffee break
 - 16:30 – 18:00: Trabajo libre
+
+
+## Instalación
+
+Con los siguientes comandos se instala NGSolve, Jupyter (para abrir notebooks) y el backend de WebGL para visualizar localmente. 
+
+pip install ngsolve
+pip install jupyter
+pip install jupyter_contrib_nbextensions
+
+También se puede usar Google Collab siguiendo las instrucciones disponibles en [TODO]
