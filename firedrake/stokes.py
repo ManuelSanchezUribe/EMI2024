@@ -2,13 +2,16 @@ from firedrake import *
 from time import perf_counter as time
 from sys import argv
 N = int(argv[1])
+KSP = argv[2]
+PC = argv[3]
+SCHUR = bool(argv[4])
 Re = 50
-save_output = True
+save_output = False
 
 
 M = UnitSquareMesh(N, N)
 
-Vu = VectorFunctionSpace(M, 'CG', 1)
+Vu = VectorFunctionSpace(M, 'CG', 2)
 Vp = FunctionSpace(M, 'CG', 1)
 V = Vu * Vp
 
@@ -23,7 +26,10 @@ F = Constant(1/Re) * \
 L = dot(Constant((0, 0)), v) * dx
 F_schur = Constant(Re) * p * q * dx
 FJ = F
-FP = FJ + F_schur
+if SCHUR:
+    FP = FJ + F_schur
+else:
+    FP = FJ
 
 # BCs
 zero = Constant((0, 0))
@@ -34,15 +40,15 @@ bcs = [bc_noslip, bc_in]
 
 
 params = {
-    "ksp_type": "gmres",
-    "mat_type": "nest",
-    "ksp_norm_type": "unpreconditioned",
+    "ksp_type": KSP,
+    #"mat_type": "nest", # Improves scalability
+    #"ksp_norm_type": "unpreconditioned",
     "ksp_converged_reason": None,
     "ksp_max_it": 1000,
     "ksp_atol": 1e-14,
     "ksp_rtol": 1e-6,
     "ksp_gmres_restart": "1000",
-    "pc_type": "fieldsplit",
+    "pc_type": PC,
     "pc_fieldsplit_type": "schur",
     "pc_fieldsplit_schur_type": "diag",
     "pc_fieldsplit_schur_precondition": "a11",
@@ -68,7 +74,8 @@ if save_output:
     uout, pout = sol.subfunctions
     outfile.write(uout, pout)
 
+dofs = V.dim()
 if COMM_WORLD.rank == 0:
     print("Solved in {:.2e}s".format(t_solve), flush=True)
-    print("DoFs:", V.dim())
+    print("DoFs:", dofs)
 
