@@ -2,20 +2,20 @@
 Escuela de Verano en Métodos Iterativos 2024 @ Centro de Modelamiento Matemático (CMM), av. Beauchef 851 piso 7, sala von Neumann.
 
 ## Organizadores
-- Nicolas A. Barnafi
+- Nicolás A. Barnafi
 - Manuel A. Sanchez
 
 
 ## Programa
 Día 1 – Jueves 4
 
-- 09:30 – 11:00: Bienvenida + Introducción
-- 11:00 – 11:30: Coffee break
-- 11:30 – 13:00: Métodos Iterativos: Richardson, Jacobi, GaussSeidel, SOR, Matriz de iteracion - analisis de convergencia
-- 13:00 – 14:30: Libre
-- 14:30 – 16:00: Métodos de Krylov: CG y GMRES
-- 16:00 – 16:30: Coffee break
-- 16:30 – 18:00: Métodos de Krylov: Cálculo de valores propios
+| 09:30 – 11:00 | Bienvenida + Introducción
+| 11:00 – 11:30 | Coffee break
+| 11:30 – 13:00 | Métodos Iterativos: Richardson, Jacobi, GaussSeidel, SOR, Matriz de iteracion - analisis de convergencia
+| 13:00 – 14:30 | Libre
+| 14:30 – 16:00 | Métodos de Krylov: CG y GMRES
+| 16:00 – 16:30 | Coffee break
+| 16:30 – 18:00 | Métodos de Krylov: Cálculo de valores propios
 
 Día 2 – Viernes 5
 
@@ -36,4 +36,4 @@ Con los siguientes comandos se instala NGSolve, Jupyter (para abrir notebooks) y
     pip install jupyter
     pip install webgui_jupyter_widgets
 
-También se puede usar Google Collab siguiendo las instrucciones disponibles en [TODO]. Recomendamos compilar la librería siguiendo las instrucciones de la documentación para agregar soporte MPI y MUMPS (parallel LU).
+También se puede usar Google Collab siguiendo las instrucciones disponibles en [TODO]. Recomendamos compilar la librería siguiendo las instrucciones de la documentación para agregar soporte MPI y MUMPS (parallel LU), disponible [acá](https://docu.ngsolve.org/latest/install/installlinux.html).
