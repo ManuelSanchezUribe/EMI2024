@@ -33,7 +33,9 @@ Día 2 – Viernes 5
 Con los siguientes comandos se instala NGSolve, Jupyter (para abrir notebooks) y el backend de WebGL para visualizar localmente. 
 
 pip install ngsolve
+
 pip install jupyter
+
 pip3 install webgui_jupyter_widgets
 
-También se puede usar Google Collab siguiendo las instrucciones disponibles en [TODO]
+También se puede usar Google Collab siguiendo las instrucciones disponibles en [TODO]. Recomendamos compilar la librería siguiendo las instrucciones de la documentación para agregar soporte MPI y MUMPS (parallel LU).
