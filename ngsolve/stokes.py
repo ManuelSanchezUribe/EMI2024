@@ -1,5 +1,4 @@
 from ngsolve import *
-from ngsolve.webgui import Draw
 from netgen.occ import *
 
 # Geometry
@@ -7,17 +6,14 @@ shape = Rectangle(2,0.41).Circle(0.2,0.2,0.05).Reverse().Face()
 shape.edges.name="wall"
 shape.edges.Min(X).name="inlet"
 shape.edges.Max(X).name="outlet"
-Draw (shape);
 
 geo = OCCGeometry(shape, dim=2)
-mesh = Mesh(geo.GenerateMesh(maxh=0.05))
+mesh = Mesh(geo.GenerateMesh(maxh=0.1))
 mesh.Curve(3)
-Draw (mesh);
 
 # Function Spaces (Taylor-Hood)
 V = VectorH1(mesh, order=2, dirichlet="wall|inlet|cyl")
 Q = L2(mesh, order=1)
-print ("V.ndof =", V.ndof, ", Q.ndof =", Q.ndof)
 X = V*Q
 (u,p),(v,q) = X.TnT()
 
@@ -34,7 +30,6 @@ a.Assemble()
 res = -a.mat * gf.vec
 inv = CGSolver(a.mat, pre.mat, precision=1e-6, printrates=True)
 gf.vec.data += inv * res
-Draw(gfu, mesh);
 
 vtk = VTKOutput(ma=mesh,
                 coefs=[gfu, gfp],
