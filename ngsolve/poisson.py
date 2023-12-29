@@ -33,7 +33,7 @@ uin = CF(1.5*4*y*(0.41-y)/(0.41*0.41))
 gf.Set(uin, definedon=mesh.Boundaries("inlet"))
 
 # Solution with simple iterative method
-pre = Preconditioner(a, "hypre")
+pre = Preconditioner(a, "bddc")
 a.Assemble()
 f.Assemble()
 res = f.vec -a.mat * gf.vec
