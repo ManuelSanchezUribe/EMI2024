@@ -37,7 +37,7 @@ pre = Preconditioner(a, "bddc")
 a.Assemble()
 f.Assemble()
 res = f.vec -a.mat * gf.vec
-inv = solvers.CG(a.mat, f.vec, pre=pre.mat, sol=gf.vec, tol=1e-10, printrates='\r', maxsteps=500, printing=comm.rank==0)
+inv = solvers.CG(a.mat, f.vec, pre=None, sol=gf.vec, tol=1e-10, printrates='\r', maxsteps=500, printing=comm.rank==0)
 # Uncomment to use direct solver instead
 #inv = a.mat.Inverse(freedofs=V.FreeDofs(), inverse="umfpack")
 #gf.vec.data += inv * res

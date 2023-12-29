@@ -21,6 +21,7 @@ else:
 mesh.Curve(3)
 V = VectorH1(mesh, order=1, dirichlet="wall|inlet|cyl")
 Q = H1(mesh, order=1)
+X = V * Q
 
 #if comm.rank==0: print("u DoFs:", V.ndofglobal)
 #if comm.rank==0: print("p DoFs:", Q.ndofglobal)
