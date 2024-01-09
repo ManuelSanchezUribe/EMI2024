@@ -49,3 +49,10 @@ También se puede usar Google Colab siguiendo las instrucciones disponibles en [
 ![emi1](images/emi1.jpeg)
 ![emi2](images/emi2.jpeg)
 ![emi3](images/emi3.jpeg)
+
+## Referencias
+
+- Y Saad. Iterative methods for sparse linear systems. Society for Industrial and Applied Mathematics, 2003.
+- AJ Wathen. Preconditioning. Acta Numerica, 2015.
+
+Gran parte del material del curso está basado en el libro de Saad, además de material que teníamos generado desde antes. La segunda referencia es una Acta Numerica, que es una familia de papers que se hacen _a pedido_, o sea que ese tal Wathen sabía *tanto* de precondicionadores, que le pidieron que haga un compendio del estado del arte. Es una lectura bastante relajada, clarísima y muy vigente.
