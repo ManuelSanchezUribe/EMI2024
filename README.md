@@ -43,3 +43,9 @@ Con los siguientes comandos se instala NGSolve, Jupyter (para abrir notebooks) y
 También se puede usar Google Colab siguiendo las instrucciones disponibles en [Fem on Colab](https://fem-on-colab.github.io/packages.html). Recomendamos compilar la librería siguiendo las instrucciones de la documentación para agregar soporte para MPI, UMFPACK y MUMPS, disponible [acá](https://docu.ngsolve.org/latest/install/installlinux.html).
 
 *Ojo con la compilación local, ya que el link a la carpeta python lo tienen escrito para python3, y en Ubuntu 22.04 la carpeta en realidad se llama python3.10.*
+
+## Fotos
+
+![emi1](images/emi1.jpeg)
+![emi2](images/emi2.jpeg)
+![emi3](images/emi3.jpeg)
