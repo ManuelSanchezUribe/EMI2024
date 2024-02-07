@@ -46,7 +46,7 @@ gfu.Set(uin, definedon=mesh.Boundaries("inlet"))
 
 
 Qjacobi = Preconditioner(mp, "local")
-Amg = Preconditioner(a, "bddc")
+Amg = Preconditioner(a, "PETScPC", pc_type="hypre")
 a.Assemble()
 mp.Assemble()
 f.Assemble()
